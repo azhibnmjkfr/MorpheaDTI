@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MORPHEA - Your Learning Highlights</title>
+  <meta name="description" content="Platform Materi & Galeri Bahasa Inggris - MTsT Daarut Tahfizh Al-Ikhlas">
+  <meta name="author" content="Ahmad Zaman Huri, S.Pd.">
+  <meta name="theme-color" content="#1E3A8A">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root{
+      --primary: #1E3A8A; --primary-light: #3B82F6; --accent: #F59E0B; 
+      --accent-soft: #FCD34D; --bg-primary: #0F172A; --bg-secondary: #1E293B; 
+      --surface: #334155; --text: #F1F5F9; --text-muted: #CBD5E1; 
+      --border: rgba(59, 130, 246, 0.2); --radius: 1rem; --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      --shadow-hover: 0 8px 30px rgba(30, 58, 138, 0.4); --shadow-gold: 0 4px 20px rgba(245, 158, 11, 0.2);
+      --ease: cubic-bezier(0.4, 0, 0.2, 1); --focus-ring: 0 0 0 3px rgba(59, 130, 246, 0.5);
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      font-family: 'Inter', sans-serif; background: var(--bg-primary); color: var(--text); 
+      line-height: 1.6; min-height: 100vh; -webkit-font-smoothing: antialiased;
+    }
+    body::before{
+      content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background-image: radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+                       radial-gradient(circle at 80% 70%, rgba(245, 158, 11, 0.04) 0%, transparent 50%);
+      pointer-events: none; z-index: -1;
+    }
+
+    .header{
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 70%, var(--accent) 100%);
+      color: white; text-align: center; padding: 2.5rem 1rem; position: relative; overflow: hidden;
+    }
+    .logo{
+      display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 0.25rem;
+    }
+    .logo i{
+      font-size: 2.2rem;
+      background: linear-gradient(45deg, transparent, var(--accent-soft), transparent);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: shimmer 3s linear infinite;
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .logo h1{
+      font-family: 'Space Grotesk', sans-serif; font-size: 2.1rem; font-weight: 700; letter-spacing: -0.5px;
+    }
+    .subtitle{ 
+      font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 1.1rem; opacity: 0.95; margin-bottom: 0.25rem;
+    }
+    .school{ font-size: 0.9rem; opacity: 0.85; font-weight: 400; }
+
+    .main{ max-width: 1400px; margin: 0 auto; padding: 3rem 1rem; }
+    .hero{ text-align: center; margin-bottom: 3rem; }
+    .hero h2{
+      font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 600; 
+      color: var(--text); margin-bottom: 0.75rem; letter-spacing: -0.25px;
+    }
+    .hero p{ color: var(--text-muted); max-width: 680px; margin: 0 auto; font-size: 1.05rem; font-weight: 400; }
+
+    .grid{ display: grid; gap: 1.75rem; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+    .card{
+      position: relative; background: var(--bg-secondary); border-radius: var(--radius); padding: 2rem; 
+      text-align: center; border: 1px solid var(--border); transition: all 0.3s var(--ease); cursor: pointer; 
+      overflow: hidden;
+    }
+    .card::before{
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--accent-soft)); transform: scaleX(0);
+      transition: transform 0.3s var(--ease);
+    }
+    .card:hover::before{ transform: scaleX(1); }
+    .card:hover{
+      transform: translateY(-8px); box-shadow: var(--shadow-hover); border-color: var(--primary-light); 
+      background: var(--surface);
+    }
+    .card:focus-visible{ outline: none; box-shadow: var(--focus-ring); }
+
+    .icon{
+      width: 70px; height: 70px; margin: 0 auto 1.25rem; display: flex; align-items: center; 
+      justify-content: center; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: white; font-size: 1.6rem; transition: all 0.3s var(--ease); box-shadow: var(--shadow);
+    }
+    .card:hover .icon{ transform: scale(1.1); box-shadow: var(--shadow-gold); }
+
+    .azh-badge {
+      position: absolute; top: 12px; right: 12px; font-size: 0.7rem; font-weight: 600; 
+      color: var(--accent-soft); opacity: 0.6; transform: rotate(15deg); 
+      font-family: 'Space Grotesk', sans-serif; pointer-events: none;
+    }
+
+    .card h3{
+      font-family: 'Space Grotesk', sans-serif; font-size: 1.35rem; color: var(--text); 
+      margin-bottom: 0.6rem; font-weight: 600; letter-spacing: -0.25px;
+    }
+    .card p{ font-size: 0.98rem; color: var(--text-muted); margin-bottom: 1.5rem; font-weight: 400; }
+
+    .btn{
+      display: inline-flex; align-items: center; gap: 0.6rem; 
+      background: linear-gradient(135deg, var(--accent), var(--accent-soft)); 
+      color: var(--primary); font-weight: 700;
+      padding: 0.85rem 1.4rem; border-radius: 50px; font-size: 0.95rem; 
+      font-family: 'Space Grotesk', sans-serif; text-decoration: none; border: none; 
+      transition: all 0.3s var(--ease); box-shadow: var(--shadow-gold);
+    }
+    .btn:hover{
+      transform: translateY(-2px); box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+      background: linear-gradient(135deg, var(--accent-soft), var(--accent)); 
+    }
+    .btn:active{ transform: translateY(0); }
+    .btn:focus-visible{ outline: none; box-shadow: var(--focus-ring); }
+    .btn i{ font-size: 0.95rem; transition: transform 0.3s var(--ease); }
+    .btn:hover i{ transform: translateX(3px); }
+
+    .footer{
+      text-align: center; padding: 2.5rem 1rem; background: var(--bg-secondary); color: var(--text-muted);
+      font-size: 0.9rem; line-height: 1.6; border-top: 1px solid var(--border); position: relative;
+    }
+    .footer::before{
+      content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+      width: 100px; height: 2px; background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    }
+    .footer a{ color: var(--primary-light); text-decoration: none; font-weight: 600; transition: color 0.2s var(--ease); }
+    .footer a:hover{ color: var(--accent-soft); }
+    .update-info{ display: block; margin-top: 0.75rem; font-size: 0.8rem; opacity: 0.7; }
+
+    @media (max-width: 768px){
+      .header{ padding: 2rem 1rem; }
+      .logo h1{ font-size: 1.8rem; }
+      .logo i{ font-size: 1.8rem; }
+      .main{ padding: 2rem 1rem; }
+      .grid{ gap: 1.5rem; grid-template-columns: 1fr; }
+      .card{ padding: 1.75rem; }
+      .btn{ padding: 1rem 1.6rem; font-size: 1rem; }
+      .icon{ width: 65px; height: 65px; font-size: 1.5rem; }
+    }
+
+    @media (max-width: 480px){
+      .header{ padding: 1.75rem 1rem; }
+      .logo{ flex-direction: column; gap: 0.5rem; }
+      .logo h1{ font-size: 1.6rem; text-align: center; }
+      .hero h2{ font-size: 1.4rem; }
+      .hero p{ font-size: 0.95rem; }
+      .card{ padding: 1.5rem; }
+      .btn{ width: 100%; justify-content: center; }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .card, .btn, .icon{ transition: none; }
+      .card:hover{ transform: none; }
+      .logo i { animation: none; color: var(--accent-soft); background: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <i class="fas fa-seedling"></i>
+      <h1>MORPHEA</h1>
+    </div>
+    <div class="subtitle" style="color: var(--accent-soft);">Your Learning Highlights</div>
+    <div class="subtitle"><em>Relive Your Classroom Moments & Materials</em></div>
+    <div class="school">MTsT Daarut Tahfizh Al-Ikhlas</div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <h2>Explore Your Class Archive</h2>
+      <p>Dive into materials and relive class moments</p>
+    </section>
+
+    <div class="grid">
+      <div class="card" data-link="kelas-8/index.html" tabindex="0">
+        <div class="icon"><i class="fas fa-photo-video"></i></div>
+        <h3>Kelas 8</h3>
+        <p>Class 8 Memories & Materials</p>
+        <div class="azh-badge">AZH</div>
+        <a href="kelas-8/index.html" class="btn">Open Class 8 <i class="fas fa-box-open"></i></a>
+      </div>
+
+      <div class="card" data-link="kelas-9/index.html" tabindex="0">
+        <div class="icon"><i class="fas fa-photo-video"></i></div>
+        <h3>Kelas 9</h3>
+        <p>Class 9 Memories & Materials</p>
+        <div class="azh-badge">AZH</div>
+        <a href="kelas-9/index.html" class="btn">Open Class 9 <i class="fas fa-box-open"></i></a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 <strong>MORPHEA - Digital Classroom Archive</strong></p>
+    <p>Created by <a href="https://wa.me/+6282246077307">Ahmad Zaman Huri, S.Pd.</a></p>
+    <p>Dedicated to <a href="https://www.instagram.com/mtst_daaruttahfizh">MTsT Daarut Tahfizh Al-Ikhlas</a></p>
+    <small class="update-info">Memories Preserved • Always Accessible</small>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+      const href = card.dataset.link;
+      if (!href) return;
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('.btn')) return;
+        window.location.href = href;
+      });
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          window.location.href = href;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
