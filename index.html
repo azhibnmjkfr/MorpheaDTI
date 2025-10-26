@@ -4,41 +4,88 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MORPHEA - Your Learning Highlights</title>
-  <meta name="description" content="Platform Materi & Galeri Bahasa Inggris - MTsT Daarut Tahfizh Al-Ikhlas">
+  <meta name="description" content="MORPHEA: Platform materi pembelajaran dan galeri Bahasa Inggris untuk Kelas 8 & 9 di MTsT Daarut Tahfizh Al-Ikhlas">
   <meta name="author" content="Ahmad Zaman Huri, S.Pd.">
   <meta name="theme-color" content="#1E3A8A">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="MORPHEA - Your Learning Highlights">
+  <meta property="og:description" content="Platform materi pembelajaran dan galeri Bahasa Inggris untuk Kelas 8 & 9 di MTsT Daarut Tahfizh Al-Ikhlas">
+  <meta property="og:image" content="/path/to/logo.png">
+  <meta property="og:url" content="https://azhibnmjkfr.github.io/MorpheaDTI/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://azhibnmjkfr.github.io/MorpheaDTI/">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Performa: percepat koneksi font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     :root{
-      --primary: #1E3A8A; --primary-light: #3B82F6; --accent: #F59E0B; 
-      --accent-soft: #FCD34D; --bg-primary: #0F172A; --bg-secondary: #1E293B; 
-      --surface: #334155; --text: #F1F5F9; --text-muted: #CBD5E1; 
-      --border: rgba(59, 130, 246, 0.2); --radius: 1rem; --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      --shadow-hover: 0 8px 30px rgba(30, 58, 138, 0.4); --shadow-gold: 0 4px 20px rgba(245, 158, 11, 0.2);
-      --ease: cubic-bezier(0.4, 0, 0.2, 1); --focus-ring: 0 0 0 3px rgba(59, 130, 246, 0.5);
+      --primary: #1E3A8A; 
+      --primary-light: #3B82F6; 
+      --accent: #F59E0B; 
+      --accent-soft: #FCD34D; 
+      --bg-primary: #0F172A; 
+      --bg-secondary: #1E293B; 
+      --surface: #334155; 
+      --text-primary: #F1F5F9;    /* Improved hierarchy */
+      --text-secondary: #CBD5E1; 
+      --text-tertiary: #94A3B8;
+      --border: rgba(59, 130, 246, 0.2); 
+      --radius: 1rem; 
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      --shadow-hover: 0 8px 30px rgba(30, 58, 138, 0.4); 
+      --shadow-gold: 0 4px 20px rgba(245, 158, 11, 0.2);
+      --ease: cubic-bezier(0.4, 0, 0.2, 1); 
+      --focus-ring: 0 0 0 3px rgba(59, 130, 246, 0.5);
     }
 
     *{margin:0;padding:0;box-sizing:border-box}
     body{
-      font-family: 'Inter', sans-serif; background: var(--bg-primary); color: var(--text); 
-      line-height: 1.6; min-height: 100vh; -webkit-font-smoothing: antialiased;
+      font-family: 'Inter', sans-serif; 
+      background: var(--bg-primary); 
+      color: var(--text-secondary); 
+      line-height: 1.6; 
+      min-height: 100vh; 
+      -webkit-font-smoothing: antialiased;
     }
     body::before{
-      content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background-image: radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
-                       radial-gradient(circle at 80% 70%, rgba(245, 158, 11, 0.04) 0%, transparent 50%);
-      pointer-events: none; z-index: -1;
+      content: ''; 
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%;
+      background-image: 
+        radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(245, 158, 11, 0.04) 0%, transparent 50%);
+      pointer-events: none; 
+      z-index: -1;
     }
 
+    /* HEADER DIKEMBALIKAN SEPERTI SEMULA */
     .header{
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 70%, var(--accent) 100%);
-      color: white; text-align: center; padding: 2.5rem 1rem; position: relative; overflow: hidden;
+      color: white; 
+      text-align: center; 
+      padding: 2.5rem 1rem; 
+      position: relative; 
+      overflow: hidden;
     }
+
     .logo{
-      display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 0.25rem;
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      gap: 0.75rem; 
+      margin-bottom: 0.25rem;
     }
     .logo i{
       font-size: 2.2rem;
@@ -48,98 +95,247 @@
       background-clip: text;
       color: transparent;
       animation: shimmer 3s linear infinite;
+      will-change: background-position;
     }
     @keyframes shimmer {
       0% { background-position: -200% 0; }
       100% { background-position: 200% 0; }
     }
     .logo h1{
-      font-family: 'Space Grotesk', sans-serif; font-size: 2.1rem; font-weight: 700; letter-spacing: -0.5px;
+      font-family: 'Space Grotesk', sans-serif; 
+      font-size: 2.1rem; 
+      font-weight: 700; 
+      letter-spacing: -0.5px;
     }
     .subtitle{ 
-      font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 1.1rem; opacity: 0.95; margin-bottom: 0.25rem;
+      font-family: 'Space Grotesk', sans-serif; 
+      font-weight: 500; 
+      font-size: 1.1rem; 
+      opacity: 0.95; 
+      margin-bottom: 0.25rem;
     }
-    .school{ font-size: 0.9rem; opacity: 0.85; font-weight: 400; }
+    .school{ 
+      font-size: 0.9rem; 
+      opacity: 0.85; 
+      font-weight: 400; 
+    }
 
-    .main{ max-width: 1400px; margin: 0 auto; padding: 3rem 1rem; }
-    .hero{ text-align: center; margin-bottom: 3rem; }
+    .main{ 
+      max-width: 1400px; 
+      margin: 0 auto; 
+      padding: 3rem 1rem; 
+    }
+    .hero{ 
+      text-align: center; 
+      margin-bottom: 3rem; 
+    }
     .hero h2{
-      font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 600; 
-      color: var(--text); margin-bottom: 0.75rem; letter-spacing: -0.25px;
+      font-family: 'Space Grotesk', sans-serif; 
+      font-size: clamp(1.6rem, 3vw, 2.2rem); 
+      font-weight: 700; 
+      color: var(--text-primary); 
+      margin-bottom: 0.75rem; 
+      letter-spacing: -0.25px;
     }
-    .hero p{ color: var(--text-muted); max-width: 680px; margin: 0 auto; font-size: 1.05rem; font-weight: 400; }
+    .hero p{ 
+      color: var(--text-tertiary); 
+      max-width: 680px; 
+      margin: 0 auto; 
+      font-size: 1.05rem; 
+      font-weight: 400; 
+    }
 
-    .grid{ display: grid; gap: 1.75rem; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+    .grid{ 
+      display: grid; 
+      gap: 1.75rem; 
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    }
     .card{
-      position: relative; background: var(--bg-secondary); border-radius: var(--radius); padding: 2rem; 
-      text-align: center; border: 1px solid var(--border); transition: all 0.3s var(--ease); cursor: pointer; 
-      overflow: hidden;
+      position: relative; 
+      background: var(--bg-secondary); 
+      border-radius: var(--radius); 
+      padding: 2rem; 
+      text-align: center; 
+      border: 1px solid var(--border); 
+      transition: all 0.4s var(--ease); 
+      cursor: pointer; 
+      overflow: hidden; 
+      display: block; 
+      text-decoration: none; 
+      color: inherit;
+      box-shadow: 
+        0 2px 8px rgba(0,0,0,0.1),
+        0 8px 24px rgba(30, 58, 138, 0.15);
     }
     .card::before{
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(90deg, var(--primary), var(--accent-soft)); transform: scaleX(0);
+      content: ''; 
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      right: 0; 
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--accent-soft)); 
+      transform: scaleX(0);
       transition: transform 0.3s var(--ease);
     }
-    .card:hover::before{ transform: scaleX(1); }
+    .card:hover::before{ 
+      transform: scaleX(1); 
+    }
     .card:hover{
-      transform: translateY(-8px); box-shadow: var(--shadow-hover); border-color: var(--primary-light); 
+      transform: translateY(-8px); 
+      box-shadow: 
+        0 4px 16px rgba(0,0,0,0.15),
+        0 12px 32px rgba(30, 58, 138, 0.25);
+      border-color: var(--primary-light); 
       background: var(--surface);
     }
-    .card:focus-visible{ outline: none; box-shadow: var(--focus-ring); }
+    .card:focus-visible{ 
+      outline: none; 
+      box-shadow: var(--focus-ring); 
+    }
+    .card.loading::after{
+      content: ''; 
+      position: absolute; 
+      top: 50%; 
+      left: 50%; 
+      transform: translate(-50%, -50%);
+      width: 24px; 
+      height: 24px; 
+      border: 3px solid var(--accent); 
+      border-top-color: transparent;
+      border-right-color: rgba(245, 158, 11, 0.5);
+      border-radius: 50%; 
+      animation: spin 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+    }
+    @keyframes spin {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
 
     .icon{
-      width: 70px; height: 70px; margin: 0 auto 1.25rem; display: flex; align-items: center; 
-      justify-content: center; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--primary-light));
-      color: white; font-size: 1.6rem; transition: all 0.3s var(--ease); box-shadow: var(--shadow);
+      width: 70px; 
+      height: 70px; 
+      margin: 0 auto 1.25rem; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: white; 
+      font-size: 1.6rem; 
+      transition: all 0.3s var(--ease); 
+      box-shadow: var(--shadow);
     }
-    .card:hover .icon{ transform: scale(1.1); box-shadow: var(--shadow-gold); }
+    .card:hover .icon{ 
+      transform: scale(1.1); 
+      box-shadow: var(--shadow-gold); 
+    }
 
     .azh-badge {
-      position: absolute; top: 12px; right: 12px; font-size: 0.7rem; font-weight: 600; 
-      color: var(--accent-soft); opacity: 0.6; transform: rotate(15deg); 
-      font-family: 'Space Grotesk', sans-serif; pointer-events: none;
+      position: absolute; 
+      top: 12px; 
+      right: 12px; 
+      font-size: 0.7rem; 
+      font-weight: 600; 
+      color: var(--accent-soft); 
+      opacity: 0.6; 
+      transform: rotate(15deg); 
+      font-family: 'Space Grotesk', sans-serif; 
+      pointer-events: none;
     }
 
     .card h3{
-      font-family: 'Space Grotesk', sans-serif; font-size: 1.35rem; color: var(--text); 
-      margin-bottom: 0.6rem; font-weight: 600; letter-spacing: -0.25px;
+      font-family: 'Space Grotesk', sans-serif; 
+      font-size: 1.35rem; 
+      color: var(--text-primary); 
+      margin-bottom: 0.6rem; 
+      font-weight: 600; 
+      letter-spacing: -0.25px;
     }
-    .card p{ font-size: 0.98rem; color: var(--text-muted); margin-bottom: 1.5rem; font-weight: 400; }
+    .card p{ 
+      font-size: 0.98rem; 
+      color: var(--text-secondary); 
+      margin-bottom: 1.5rem; 
+      font-weight: 400; 
+    }
 
     .btn{
-      display: inline-flex; align-items: center; gap: 0.6rem; 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 0.6rem; 
       background: linear-gradient(135deg, var(--accent), var(--accent-soft)); 
-      color: var(--primary); font-weight: 700;
-      padding: 0.85rem 1.4rem; border-radius: 50px; font-size: 0.95rem; 
-      font-family: 'Space Grotesk', sans-serif; text-decoration: none; border: none; 
-      transition: all 0.3s var(--ease); box-shadow: var(--shadow-gold);
+      color: var(--primary); 
+      font-weight: 700;
+      padding: 0.85rem 1.4rem; 
+      border-radius: 50px; 
+      font-size: 0.95rem; 
+      font-family: 'Space Grotesk', sans-serif; 
+      text-decoration: none; 
+      border: none; 
+      transition: all 0.3s var(--ease); 
+      box-shadow: var(--shadow-gold);
     }
     .btn:hover{
-      transform: translateY(-2px); box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+      transform: translateY(-2px); 
+      box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
       background: linear-gradient(135deg, var(--accent-soft), var(--accent)); 
     }
-    .btn:active{ transform: translateY(0); }
-    .btn:focus-visible{ outline: none; box-shadow: var(--focus-ring); }
-    .btn i{ font-size: 0.95rem; transition: transform 0.3s var(--ease); }
-    .btn:hover i{ transform: translateX(3px); }
+    .btn:active{ 
+      transform: translateY(0); 
+    }
+    .btn:focus-visible{ 
+      outline: none; 
+      box-shadow: var(--focus-ring); 
+    }
+    .btn i{ 
+      font-size: 0.95rem; 
+      transition: transform 0.3s var(--ease); 
+    }
+    .btn:hover i{ 
+      transform: translateX(3px); 
+    }
 
     .footer{
-      text-align: center; padding: 2.5rem 1rem; background: var(--bg-secondary); color: var(--text-muted);
-      font-size: 0.9rem; line-height: 1.6; border-top: 1px solid var(--border); position: relative;
+      text-align: center; 
+      padding: 2.5rem 1rem; 
+      background: var(--bg-secondary); 
+      color: var(--text-tertiary);
+      font-size: 0.9rem; 
+      line-height: 1.6; 
+      border-top: 1px solid var(--border); 
+      position: relative;
     }
     .footer::before{
-      content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-      width: 100px; height: 2px; background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      content: ''; 
+      position: absolute; 
+      top: 0; 
+      left: 50%; 
+      transform: translateX(-50%);
+      width: 100px; 
+      height: 2px; 
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
     }
-    .footer a{ color: var(--primary-light); text-decoration: none; font-weight: 600; transition: color 0.2s var(--ease); }
-    .footer a:hover{ color: var(--accent-soft); }
-    .update-info{ display: block; margin-top: 0.75rem; font-size: 0.8rem; opacity: 0.7; }
+    .footer a{ 
+      color: var(--primary-light); 
+      text-decoration: none; 
+      font-weight: 600; 
+      transition: color 0.2s var(--ease); 
+    }
+    .footer a:hover{ 
+      color: var(--accent-soft); 
+    }
+    .update-info{ 
+      display: block; 
+      margin-top: 0.75rem; 
+      font-size: 0.8rem; 
+      opacity: 0.7; 
+    }
 
     /* WhatsApp Float Button */
     .whatsapp-float {
       position: fixed;
-      bottom: 25px;
-      right: 25px;
+      bottom: calc(25px + env(safe-area-inset-bottom));
+      right: calc(25px + env(safe-area-inset-right));
       width: 60px;
       height: 60px;
       background: #25D366;
@@ -169,6 +365,24 @@
       100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
 
+    /* Skip-link: tidak terlihat kecuali fokus keyboard */
+    .skip-link{
+      position:absolute; 
+      left:-9999px; 
+      top:auto; 
+      background:#fff; 
+      color:#000;
+      padding:.5rem .75rem; 
+      border-radius:.5rem; 
+      z-index:1001; 
+      box-shadow:0 4px 14px rgba(0,0,0,.25);
+      font-weight: 600;
+    }
+    .skip-link:focus{ 
+      left:1rem; 
+      top:1rem; 
+    }
+
     @media (max-width: 768px){
       .header{ padding: 2rem 1rem; }
       .logo h1{ font-size: 1.8rem; }
@@ -179,22 +393,21 @@
       .btn{ padding: 1rem 1.6rem; font-size: 1rem; }
       .icon{ width: 65px; height: 65px; font-size: 1.5rem; }
       .whatsapp-float {
-        bottom: 20px;
-        right: 20px;
-        width: 55px;
-        height: 55px;
-        font-size: 1.6rem;
+        bottom: calc(20px + env(safe-area-inset-bottom));
+        right: calc(20px + env(safe-area-inset-right));
+        width: 55px; height: 55px; font-size: 1.6rem;
       }
     }
 
     @media (max-width: 480px){
       .header{ padding: 1.75rem 1rem; }
-      .logo{ flex-direction: column; gap: 0.5rem; }
+      .logo{ flex-direction: column; gap: 0.75rem; }
       .logo h1{ font-size: 1.6rem; text-align: center; }
       .hero h2{ font-size: 1.4rem; }
       .hero p{ font-size: 0.95rem; }
       .card{ padding: 1.5rem; }
       .btn{ width: 100%; justify-content: center; }
+      .icon{ width: 60px; height: 60px; font-size: 1.4rem; }
     }
 
     @media (prefers-reduced-motion: reduce){
@@ -202,13 +415,18 @@
       .card:hover{ transform: none; }
       .logo i { animation: none; color: var(--accent-soft); background: none; }
       .whatsapp-float { animation: none; }
+      .card::before { transform: none; }
     }
   </style>
 </head>
 <body>
+
+  <!-- Aksesibilitas: hanya tampak saat fokus keyboard -->
+  <a href="#main" class="skip-link">Lewati ke konten utama</a>
+
   <header class="header">
     <div class="logo">
-      <i class="fas fa-seedling"></i>
+      <i class="fas fa-seedling" aria-hidden="true"></i>
       <h1>MORPHEA</h1>
     </div>
     <div class="subtitle" style="color: var(--accent-soft);">Your Learning Highlights</div>
@@ -216,59 +434,79 @@
     <div class="school">MTsT Daarut Tahfizh Al-Ikhlas</div>
   </header>
 
-  <main class="main">
+  <main id="main" class="main">
     <section class="hero">
       <h2>Explore Your Class Archive</h2>
       <p>Dive into materials and relive class moments</p>
     </section>
 
     <div class="grid">
-      <div class="card" data-link="kelas-8/index.html" tabindex="0">
-        <div class="icon"><i class="fas fa-photo-video"></i></div>
+      <a href="kelas-8/index.html" class="card" tabindex="0" role="link" aria-label="Buka arsip materi pembelajaran kelas 8">
+        <div class="icon"><i class="fas fa-pen-nib" aria-hidden="true"></i></div>
         <h3>Kelas 8</h3>
         <p>Class 8 Memories & Materials</p>
         <div class="azh-badge">AZH</div>
-        <a href="kelas-8/index.html" class="btn">Open Class 8 <i class="fas fa-box-open"></i></a>
-      </div>
+        <span class="btn">Open Class 8 <i class="fas fa-box-open"></i></span>
+      </a>
 
-      <div class="card" data-link="kelas-9/index.html" tabindex="0">
-        <div class="icon"><i class="fas fa-photo-video"></i></div>
+      <a href="kelas-9/index.html" class="card" tabindex="0" role="link" aria-label="Buka galeri foto dan kenangan kelas 9">
+        <div class="icon"><i class="fas fa-camera-retro" aria-hidden="true"></i></div>
         <h3>Kelas 9</h3>
         <p>Class 9 Memories & Materials</p>
         <div class="azh-badge">AZH</div>
-        <a href="kelas-9/index.html" class="btn">Open Class 9 <i class="fas fa-box-open"></i></a>
-      </div>
+        <span class="btn">Open Class 9 <i class="fas fa-box-open"></i></span>
+      </a>
     </div>
   </main>
 
   <footer class="footer">
     <p>© 2025 <strong>MORPHEA - Digital Classroom Archive</strong></p>
-    <p>Created by <a href="https://wa.me/+6282246077307">Ahmad Zaman Huri, S.Pd.</a></p>
-    <p>Dedicated to <a href="https://www.instagram.com/mtst_daaruttahfizh">MTsT Daarut Tahfizh Al-Ikhlas</a></p>
+    <p>Created by <a href="https://wa.me/+6282246077307" target="_blank" rel="noopener">Ahmad Zaman Huri, S.Pd.</a></p>
+    <p>Dedicated to <a href="https://www.instagram.com/mtst_daaruttahfizh" target="_blank" rel="noopener">MTsT Daarut Tahfizh Al-Ikhlas</a></p>
     <small class="update-info">Memories Preserved • Always Accessible</small>
   </footer>
 
   <!-- WhatsApp Float Button -->
-  <a href="https://wa.me/6282246077307?text=Salam%2C%20saya%20ingin%20membahas%20terkait%20MORPHEA%20kelas%20%5BIsi%20kelas%5D%2C%20%5Bisi%20tujuan%2Fkomplenan%5D.%20Terima%20kasih" 
+  <a href="https://wa.me/6282246077307?text=Salam%2C%20saya%20ingin%20membahas%20terkait%20MORPHEA%20kelas%2C%20%5Bisi%20tujuan%2Fkomplenan%5D.%20Terima%20kasih" 
      class="whatsapp-float" 
-     target="_blank"
+     target="_blank" 
+     rel="noopener"
      aria-label="Hubungi via WhatsApp">
-    <i class="fab fa-whatsapp"></i>
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
   </a>
 
   <script>
     document.querySelectorAll('.card').forEach(card => {
-      const href = card.dataset.link;
-      if (!href) return;
+      const href = card.getAttribute('href');
+      const className = card.querySelector('h3').textContent;
+      
       card.addEventListener('click', (e) => {
         if (e.target.closest('.btn')) return;
-        window.location.href = href;
+        card.classList.add('loading');
+        setTimeout(() => { window.location.href = href; }, 300);
       });
+      
       card.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          window.location.href = href;
+          card.classList.add('loading');
+          setTimeout(() => { window.location.href = href; }, 300);
         }
+      });
+      
+      card.querySelector('.btn').addEventListener('click', (e) => {
+        e.preventDefault();
+        const waLink = `https://wa.me/6282246077307?text=Salam,%20saya%20ingin%20membahas%20terkait%20MORPHEA%20${encodeURIComponent(className)},%20[isi%20tujuan/komplenan].%20Terima%20kasih`;
+        const w = window.open(waLink, '_blank');
+        if (w) w.opener = null; // keamanan setara rel=noopener untuk window.open
+      });
+    });
+
+    // Tambahan: Smooth scroll untuk skip-link
+    document.querySelector('.skip-link').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
       });
     });
   </script>
