@@ -3,124 +3,421 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kelas 8 - MORPHEA</title>
-  <meta name="description" content="Materi & Galeri Bahasa Inggris Kelas 8 - MTsT Daarut Tahfizh Al-Ikhlas">
-  <meta name="theme-color" content="#1E3A8A">
+  <title>Kelas 8 - MORPHEA | Class 8 Learning Materials & Gallery</title>
+  <meta name="description" content="Materi pembelajaran Bahasa Inggris Kelas 8 dan galeri kegiatan - MTsT Daarut Tahfizh Al-Ikhlas">
+  <meta name="author" content="Ahmad Zaman Huri, S.Pd.">
+  <meta name="theme-color" content="#1E2A44">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Kelas 8 - MORPHEA | Class 8 Learning Materials">
+  <meta property="og:description" content="Akses materi pembelajaran dan galeri kegiatan Bahasa Inggris Kelas 8">
+  <meta property="og:url" content="https://azhibnmjkfr.github.io/MorpheaDTI/kelas-8/">
+  <meta property="og:type" content="website">
+
+  <!-- Performa: percepat koneksi font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     :root{
-      --primary: #1E3A8A; --primary-light: #3B82F6; --accent: #F59E0B; 
-      --accent-soft: #FCD34D; --bg-primary: #0F172A; --bg-secondary: #1E293B; 
-      --surface: #334155; --text: #F1F5F9; --text-muted: #CBD5E1; 
-      --border: rgba(59, 130, 246, 0.2); --radius: 1rem; --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      --shadow-hover: 0 8px 30px rgba(30, 58, 138, 0.4); --shadow-gold: 0 4px 20px rgba(245, 158, 11, 0.2);
-      --ease: cubic-bezier(0.4, 0, 0.2, 1); --focus-ring: 0 0 0 3px rgba(59, 130, 246, 0.5);
+      --primary: #1E2A44; /* Deep slate blue */
+      --primary-light: #5A7F9A; /* Muted steel blue */
+      --accent: #C4A484; /* Warm taupe gold */
+      --accent-soft: #E8D7C2; /* Creamy beige */
+      --bg-primary: #0F172A; /* Dark navy */
+      --bg-secondary: #1F2A44; /* Slightly lighter slate */
+      --surface: #2D3A5A; /* Mid-tone slate for hover */
+      --text-primary: #F8FAFC; /* Soft white */
+      --text-secondary: #A1B3C9; /* Light blue-gray */
+      --text-tertiary: #A1B3C9; /* Light blue-gray */
+      --border: rgba(90, 127, 154, 0.2); /* Steel blue-based border */
+      --radius: 1rem; 
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      --shadow-hover: 0 8px 30px rgba(30, 42, 68, 0.4); 
+      --shadow-gold: 0 4px 20px rgba(196, 164, 132, 0.3);
+      --ease: cubic-bezier(0.4, 0, 0.2, 1); 
+      --focus-ring: 0 0 0 3px rgba(90, 127, 154, 0.5);
     }
 
     *{margin:0;padding:0;box-sizing:border-box}
     body{
-      font-family: 'Inter', sans-serif; background: var(--bg-primary); color: var(--text); 
-      line-height: 1.6; min-height: 100vh; -webkit-font-smoothing: antialiased;
+      font-family: 'Inter', sans-serif; 
+      background: var(--bg-primary); 
+      color: var(--text-secondary); 
+      line-height: 1.6; 
+      min-height: 100vh; 
+      -webkit-font-smoothing: antialiased;
     }
     body::before{
-      content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background-image: radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
-                       radial-gradient(circle at 80% 70%, rgba(245, 158, 11, 0.04) 0%, transparent 50%);
-      pointer-events: none; z-index: -1;
+      content: ''; 
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%;
+      background-image: 
+        radial-gradient(circle at 20% 30%, rgba(90, 127, 154, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(196, 164, 132, 0.05) 0%, transparent 50%);
+      pointer-events: none; 
+      z-index: -1;
     }
 
     .header{
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 70%, var(--accent) 100%);
-      color: white; padding: 1.5rem 1rem; display: flex; align-items: center; gap: 1rem;
+      color: white; 
+      padding: 1.5rem 1rem; 
+      display: flex; 
+      align-items: center; 
+      gap: 1rem;
     }
     .back-btn{
-      display: flex; align-items: center; gap: 0.5rem; color: var(--accent-soft); text-decoration: none;
-      font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 0.95rem; padding: 0.5rem;
-      border-radius: 0.5rem; transition: all 0.3s var(--ease);
+      display: flex; 
+      align-items: center; 
+      gap: 0.5rem; 
+      color: var(--accent-soft); 
+      text-decoration: none;
+      font-family: 'Space Grotesk', sans-serif; 
+      font-weight: 600; 
+      font-size: 0.95rem; 
+      padding: 0.5rem;
+      border-radius: 0.5rem; 
+      transition: all 0.3s var(--ease);
+      border: 1px solid transparent;
     }
-    .back-btn:hover{ background: rgba(252, 211, 77, 0.1); transform: translateX(-2px); }
-    .header-title{ margin-left: auto; text-align: right; }
-    .header-title h1{ font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.25rem; }
-    .header-title .subtitle{ font-size: 0.85rem; opacity: 0.9; font-weight: 400; }
+    .back-btn:hover{ 
+      background: rgba(232, 215, 194, 0.15); 
+      transform: translateX(-2px); 
+      border-color: rgba(232, 215, 194, 0.3);
+    }
+    .back-btn:focus-visible{
+      outline: none;
+      box-shadow: var(--focus-ring);
+      border-color: var(--accent-soft);
+    }
+    .header-title{ 
+      margin-left: auto; 
+      text-align: right; 
+    }
+    .header-title h1{ 
+      font-family: 'Space Grotesk', sans-serif; 
+      font-size: 1.5rem; 
+      font-weight: 700; 
+      margin-bottom: 0.25rem; 
+    }
+    .header-title .subtitle{ 
+      font-size: 0.85rem; 
+      opacity: 0.9; 
+      font-weight: 400; 
+    }
 
-    .main{ max-width: 1400px; margin: 0 auto; padding: 2rem 1rem; }
-    .hero{ text-align: center; margin-bottom: 3rem; }
-    .hero h2{ font-family: 'Space Grotesk', sans-serif; font-size: 2.2rem; font-weight: 600; color: var(--text); margin-bottom: 0.75rem; }
-    .hero p{ color: var(--text-muted); max-width: 680px; margin: 0 auto; font-size: 1.1rem; }
+    .main{ 
+      max-width: 1400px; 
+      margin: 0 auto; 
+      padding: 2rem 1rem; 
+    }
+    .hero{ 
+      text-align: center; 
+      margin-bottom: 3rem; 
+    }
+    .hero h2{ 
+      font-family: 'Space Grotesk', sans-serif; 
+      font-size: clamp(1.8rem, 4vw, 2.4rem); 
+      font-weight: 700; 
+      color: var(--text-primary); 
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .hero p{ 
+      color: var(--text-tertiary); 
+      max-width: 680px; 
+      margin: 0 auto; 
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
 
-    .grid{ display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); max-width: 800px; margin: 0 auto; }
+    .grid{ 
+      display: grid; 
+      gap: 2rem; 
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+      max-width: 800px; 
+      margin: 0 auto; 
+    }
     .card{
-      position: relative; background: var(--bg-secondary); border-radius: var(--radius); padding: 2.5rem; 
-      text-align: center; border: 1px solid var(--border); transition: all 0.3s var(--ease); cursor: pointer; overflow: hidden;
+      position: relative; 
+      background: var(--bg-secondary); 
+      border-radius: var(--radius); 
+      padding: 2.5rem; 
+      text-align: center; 
+      border: 1px solid var(--border); 
+      transition: all 0.4s var(--ease); 
+      cursor: pointer; 
+      overflow: hidden;
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 
+        0 2px 8px rgba(0,0,0,0.1),
+        0 8px 24px rgba(30, 42, 68, 0.15);
     }
     .card::before{
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
-      background: linear-gradient(90deg, var(--primary), var(--accent-soft)); transform: scaleX(0);
+      content: ''; 
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      right: 0; 
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent-soft)); 
+      transform: scaleX(0);
       transition: transform 0.3s var(--ease);
     }
-    .card:hover::before{ transform: scaleX(1); }
-    .card:hover{ transform: translateY(-8px); box-shadow: var(--shadow-hover); border-color: var(--primary-light); background: var(--surface); }
-    .card:focus-visible{ outline: none; box-shadow: var(--focus-ring); }
+    .card:hover::before{ 
+      transform: scaleX(1); 
+    }
+    .card:hover{ 
+      transform: translateY(-8px); 
+      box-shadow: 
+        0 4px 16px rgba(0,0,0,0.15),
+        0 12px 32px rgba(30, 42, 68, 0.25);
+      border-color: var(--primary-light); 
+      background: var(--surface); 
+    }
+    .card:focus-visible{ 
+      outline: none; 
+      box-shadow: var(--focus-ring); 
+    }
 
     .icon{
-      width: 80px; height: 80px; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center;
-      border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--primary-light));
-      color: white; font-size: 2rem; transition: all 0.3s var(--ease); box-shadow: var(--shadow);
+      width: 80px; 
+      height: 80px; 
+      margin: 0 auto 1.5rem; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+      border-radius: 50%; 
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: white; 
+      font-size: 2rem; 
+      transition: all 0.3s var(--ease); 
+      box-shadow: var(--shadow);
     }
-    .card:hover .icon{ transform: scale(1.1); box-shadow: var(--shadow-gold); }
+    .card:hover .icon{ 
+      transform: scale(1.1); 
+      box-shadow: var(--shadow-gold); 
+    }
 
     .azh-badge {
-      position: absolute; top: 15px; right: 15px; font-size: 0.7rem; font-weight: 600; 
-      color: var(--accent-soft); opacity: 0.6; transform: rotate(15deg); 
-      font-family: 'Space Grotesk', sans-serif; pointer-events: none;
+      position: absolute; 
+      top: 15px; 
+      right: 15px; 
+      font-size: 0.7rem; 
+      font-weight: 600; 
+      color: var(--accent-soft); 
+      opacity: 0.6; 
+      transform: rotate(15deg); 
+      font-family: 'Space Grotesk', sans-serif; 
+      pointer-events: none;
     }
 
-    .card h3{ font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; color: var(--text); margin-bottom: 0.8rem; font-weight: 600; }
-    .card p{ font-size: 1rem; color: var(--text-muted); margin-bottom: 2rem; line-height: 1.7; }
+    .card h3{ 
+      font-family: 'Space Grotesk', sans-serif; 
+      font-size: 1.5rem; 
+      color: var(--text-primary); 
+      margin-bottom: 0.8rem; 
+      font-weight: 600; 
+    }
+    .card p{ 
+      font-size: 1rem; 
+      color: var(--text-secondary); 
+      margin-bottom: 2rem; 
+      line-height: 1.7; 
+    }
 
     .btn{
-      display: inline-flex; align-items: center; gap: 0.8rem; 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 0.8rem; 
       background: linear-gradient(135deg, var(--accent), var(--accent-soft)); 
-      color: var(--primary); font-weight: 700;
-      padding: 1rem 1.8rem; border-radius: 50px; font-size: 1rem; 
-      font-family: 'Space Grotesk', sans-serif; text-decoration: none; border: none; 
-      transition: all 0.3s var(--ease); box-shadow: var(--shadow-gold);
+      color: var(--primary); 
+      font-weight: 700;
+      padding: 1rem 1.8rem; 
+      border-radius: 50px; 
+      font-size: 1rem; 
+      font-family: 'Space Grotesk', sans-serif; 
+      text-decoration: none; 
+      border: none; 
+      transition: all 0.3s var(--ease); 
+      box-shadow: var(--shadow-gold);
     }
     .btn:hover{
-      transform: translateY(-2px); box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+      transform: translateY(-2px); 
+      box-shadow: 0 8px 25px rgba(196, 164, 132, 0.3);
       background: linear-gradient(135deg, var(--accent-soft), var(--accent)); 
     }
     .btn:active{ transform: translateY(0); }
-    .btn:focus-visible{ outline: none; box-shadow: var(--focus-ring); }
-    .btn i{ font-size: 1.1rem; transition: transform 0.3s var(--ease); }
-    .btn:hover i{ transform: translateX(4px); }
+    .btn:focus-visible{ 
+      outline: none; 
+      box-shadow: var(--focus-ring); 
+    }
+    .btn i{ 
+      font-size: 1.1rem; 
+      transition: transform 0.3s var(--ease); 
+    }
+    .btn:hover i{ 
+      transform: translateX(4px); 
+    }
 
     .footer{
-      text-align: center; padding: 2rem 1rem; background: var(--bg-secondary); color: var(--text-muted);
-      font-size: 0.9rem; border-top: 1px solid var(--border); margin-top: 4rem;
+      text-align: center; 
+      padding: 2.5rem 1rem; 
+      background: var(--bg-secondary); 
+      color: var(--text-tertiary);
+      font-size: 0.9rem; 
+      line-height: 1.6; 
+      border-top: 1px solid var(--border); 
+      margin-top: 4rem;
+      position: relative;
     }
-    .footer a{ color: var(--primary-light); text-decoration: none; font-weight: 600; transition: color 0.2s var(--ease); }
-    .footer a:hover{ color: var(--accent-soft); }
+    .footer::before{
+      content: ''; 
+      position: absolute; 
+      top: 0; 
+      left: 50%; 
+      transform: translateX(-50%);
+      width: 100px; 
+      height: 2px; 
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    }
+    .footer a{ 
+      color: var(--primary-light); 
+      text-decoration: none; 
+      font-weight: 600; 
+      transition: color 0.2s var(--ease); 
+    }
+    .footer a:hover{ 
+      color: var(--accent-soft); 
+    }
+    .update-info{ 
+      display: block; 
+      margin-top: 0.75rem; 
+      font-size: 0.8rem; 
+      opacity: 0.7; 
+    }
+
+    /* WhatsApp Float Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: calc(25px + env(safe-area-inset-bottom));
+      right: calc(25px + env(safe-area-inset-right));
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      transition: all 0.3s var(--ease);
+      z-index: 1000;
+      animation: pulse-whatsapp 2s infinite;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+      background: #128C7E;
+    }
+    .whatsapp-float:active {
+      transform: scale(0.95);
+    }
+    .whatsapp-float:focus-visible {
+      outline: none;
+      box-shadow: var(--focus-ring);
+    }
+    @keyframes pulse-whatsapp {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    /* Skip-link */
+    .skip-link{
+      position:absolute; 
+      left:-9999px; 
+      top:auto; 
+      background:#fff; 
+      color:#000;
+      padding:.5rem .75rem; 
+      border-radius:.5rem; 
+      z-index:1001; 
+      box-shadow:0 4px 14px rgba(0,0,0,.25);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .skip-link:focus{ 
+      left:1rem; 
+      top:1rem; 
+    }
+
+    /* Loading State */
+    .card.loading {
+      pointer-events: none;
+    }
+    .card.loading::after {
+      content: ''; 
+      position: absolute; 
+      top: 50%; 
+      left: 50%; 
+      transform: translate(-50%, -50%);
+      width: 24px; 
+      height: 24px; 
+      border: 3px solid var(--accent); 
+      border-top-color: transparent;
+      border-right-color: rgba(196, 164, 132, 0.5);
+      border-radius: 50%; 
+      animation: spin 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+    }
+    @keyframes spin {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
 
     @media (max-width:768px){
       .header{ flex-direction: column; text-align: center; gap: 1rem; }
       .header-title{ margin-left: 0; text-align: center; }
       .card{padding: 2rem}
       .grid{gap: 1.5rem}
+      .hero h2 { font-size: 1.6rem; }
+      .hero p { font-size: 1rem; }
     }
+
+    @media (max-width: 480px){
+      .card{padding: 1.75rem}
+      .grid{grid-template-columns: 1fr; gap: 1.25rem;}
+      .icon{ width: 70px; height: 70px; font-size: 1.8rem; }
+      .btn{ width: 100%; justify-content: center; }
+    }
+
     @media (prefers-reduced-motion: reduce){
-      .card, .btn, .icon{ transition: none; }
-      .card:hover{ transform: none; }
+      .card, .btn, .icon, .back-btn{ transition: none; }
+      .card:hover, .btn:hover, .back-btn:hover{ transform: none; }
+      .whatsapp-float { animation: none; }
+      .card::before { transform: none; }
     }
   </style>
 </head>
 <body>
+
+  <!-- Skip-link -->
+  <a href="#main" class="skip-link">Lewati ke konten utama</a>
+
   <header class="header">
-    <a href="../index.html" class="back-btn">
-      <i class="fas fa-arrow-left"></i> BACK TO DASHBOARD
+    <a href="../index.html" class="back-btn" aria-label="Kembali ke halaman utama MORPHEA">
+      <i class="fas fa-arrow-left" aria-hidden="true"></i> BACK TO DASHBOARD
     </a>
     <div class="header-title">
       <h1>Kelas 8</h1>
@@ -128,54 +425,111 @@
     </div>
   </header>
 
-  <main class="main">
-    <section class="hero">
-      <h2>Explore Class 8 Archives</h2>
+  <main id="main" class="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <h2 id="hero-title">Explore Class 8 Archives</h2>
       <p>Access their learning materials and browse through their classroom memories</p>
     </section>
 
     <div class="grid">
       <!-- MATERI CARD -->
-      <div class="card">
-        <div class="icon"><i class="fas fa-book-open"></i></div>
+      <a href="https://drive.google.com/drive/folders/1ul1_-9paGRr70rNLMSe87p4t4VdppnY0?usp=sharing" 
+         class="card" 
+         target="_blank" 
+         rel="noopener"
+         aria-label="Buka materi pembelajaran Kelas 8 di Google Drive">
+        <div class="icon"><i class="fas fa-book-open" aria-hidden="true"></i></div>
         <h3>Learning Materials</h3>
         <p>Their PDF documents, presentations, worksheets and English learning resources</p>
         <div class="azh-badge">AZH</div>
-        <a href="https://drive.google.com/drive/folders/1ul1_-9paGRr70rNLMSe87p4t4VdppnY0?usp=sharing" 
-           class="btn" target="_blank" rel="noopener">
-           Open Materials <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
+        <span class="btn">
+          Open Materials <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+        </span>
+      </a>
 
       <!-- GALERI CARD -->
-      <div class="card">
-        <div class="icon"><i class="fas fa-images"></i></div>
+      <a href="https://drive.google.com/drive/folders/1tMly9o54FpmWfozqXK5aI_bPMMYivzvz?usp=sharing" 
+         class="card" 
+         target="_blank" 
+         rel="noopener"
+         aria-label="Buka galeri foto Kelas 8 di Google Drive">
+        <div class="icon"><i class="fas fa-images" aria-hidden="true"></i></div>
         <h3>Class Gallery</h3>
         <p>Their photos and videos from classroom activities and learning moments</p>
         <div class="azh-badge">AZH</div>
-        <a href="https://drive.google.com/drive/folders/1tMly9o54FpmWfozqXK5aI_bPMMYivzvz?usp=sharing" 
-           class="btn" target="_blank" rel="noopener">
-           View Gallery <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
+        <span class="btn">
+          View Gallery <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+        </span>
+      </a>
     </div>
   </main>
 
   <footer class="footer">
     <p>© 2025 <strong>MORPHEA - Digital Classroom Archive</strong></p>
-    <p>Created by <a href="https://wa.me/+6282246077307">Ahmad Zaman Huri, S.Pd.</a></p>
-    <p>Dedicated to <a href="https://www.instagram.com/mtst_daaruttahfizh">MTsT Daarut Tahfizh Al-Ikhlas</a></p>
+    <p>Created by <a href="https://wa.me/+6282246077307" target="_blank" rel="noopener">Ahmad Zaman Huri, S.Pd.</a></p>
+    <p>Dedicated to <a href="https://www.instagram.com/mtst_daaruttahfizh" target="_blank" rel="noopener">MTsT Daarut Tahfizh Al-Ikhlas</a></p>
     <small class="update-info">Memories Preserved • Always Accessible</small>
   </footer>
 
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/6282246077307?text=Salam%2C%20saya%20ingin%20bertanya%20tentang%20materi%20Kelas%208%20MORPHEA" 
+     class="whatsapp-float" 
+     target="_blank" 
+     rel="noopener"
+     aria-label="Hubungi via WhatsApp untuk pertanyaan Kelas 8">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
   <script>
+    // Enhanced JavaScript dengan loading states dan analytics
     document.querySelectorAll('.card').forEach(card => {
-      const link = card.querySelector('a.btn');
-      if (!link) return;
+      const handleCardClick = () => {
+        // Tambah loading state
+        card.classList.add('loading');
+        
+        // Delay untuk menunjukkan loading (opsional)
+        setTimeout(() => {
+          const w = window.open(card.href, '_blank');
+          if (w) w.opener = null;
+          
+          // Hapus loading state setelah delay
+          setTimeout(() => card.classList.remove('loading'), 500);
+        }, 300);
+      };
+
+      // Klik card
       card.addEventListener('click', (e) => {
-        if (e.target.closest('.btn')) return;
-        window.open(link.href, '_blank');
+        e.preventDefault();
+        handleCardClick();
       });
+
+      // Keyboard navigation
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          handleCardClick();
+        }
+      });
+    });
+
+    // Smooth scroll untuk skip-link
+    document.querySelector('.skip-link').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+
+    // Focus management untuk accessibility
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+      }
+    });
+
+    document.addEventListener('mousedown', function() {
+      document.body.classList.remove('keyboard-navigation');
     });
   </script>
 </body>
